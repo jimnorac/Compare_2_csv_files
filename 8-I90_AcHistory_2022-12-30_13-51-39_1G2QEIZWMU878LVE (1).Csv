@@ -1,0 +1,96 @@
+Aircraft History Prepared 12/30/2022 13:51:40 Local Time
+
+Display:,Date/time from 11/23/2022 - 0600 UTC to 11/24/2022 - 0559 UTC.
+,Classification Tower Count
+,Classification TRACON Count
+,Time in UTC
+,Sorted by Date/Time
+
+Filters:,Classification Tower Count:  BPT
+
+Callsign,Date,Time,Category,Type,Msg,Rules,Apt,Alt,Bcn,Scr1,Scr2,ADE,Psn,APO,Twr,Rdr,Area,Airspace,Entry,Exit,Hdg,Spd,RY,WC,TA,X,Y,Fnct,S1,S2,S3,F1,F2,X2,AA,CM
+SKW4999,11/23/2022,13:22:44,AC,CRJ7,TRF,IFR,BPT,000,2401,,ROM,D,1D,1,A,E,,t,BPT,RAF,000,158,???,L,41,70.15,-2.80,?,,G,,17,0,11,,90:Initial departure count.
+PL3,11/23/2022,14:15:59,GA,C182,APT,VFR,BPT,007,5372,JFA,,E,3T,0,G,,,t,,BPT,112,096,,S,41,65.32,0.49,?,V,I,,13,0,11,,123:(Undefined)
+AIRR2,11/23/2022,14:34:24,MI,B06,TRF,VFR,BPT,003,0472,,,D,3T,1,E,,,t,,,003,050,???,S,41,70.06,-1.98,?,V,I,,17,0,11,,123:(Undefined)
+AIRR2,11/23/2022,14:38:56,MI,B06,TRF,VFR,BPT,003,0472,,,D,3T,0,E,,,t,,,121,055,???,S,41,69.90,-2.57,?,V,I,,17,0,11,,247:Count removed because aircraft never left closed pattern.
+AIRR2,11/23/2022,14:43:11,MI,B06,TRM,VFR,BPT,004,0472,,,A,3T,0,E,,,t,,,229,068,???,S,41,69.31,-1.74,?,V,I,,17,0,11,,247:Count removed because aircraft never left closed pattern.
+PL18,11/23/2022,14:53:01,GA,C185,APT,VFR,BPT,006,5355,JFA,,E,3T,0,G,,,t,,BPT,076,100,,S,41,64.51,-1.28,?,V,I,,13,0,11,,123:(Undefined)
+NASA904,11/23/2022,14:55:15,GA,T38,CLA,IFR,BPT,002,4256,BPT,I12,A,3T,1,A,E,,t,EFD,BPT,120,179,???,S,41,68.78,-1.99,?,,I,,17,0,11,,101:In arrival capture area.
+NASA904,11/23/2022,14:55:15,GA,T38,CLD,IFR,BPT,002,4256,BPT,I12,D,3T,1,A,E,,t,EFD,BPT,120,179,???,S,41,68.78,-1.99,?,,I,,17,0,11,,20:Practice approach departure counted.
+AIRR2,11/23/2022,14:57:16,MI,B06,TRF,VFR,BPT,003,0472,,,D,3T,0,E,,,t,,,033,047,???,S,41,70.01,-1.93,?,V,I,,17,0,11,,247:Count removed because aircraft never left closed pattern.
+NASA904,11/23/2022,15:05:32,GA,T38,CST,IFR,BPT,002,4256,BPT,S34,A,3T,1,A,E,,t,EFD,POP,127,184,???,S,41,68.58,-1.88,?,,I,,17,0,11,,109:Coasted in airport capture area
+NASA904,11/23/2022,15:05:37,GA,T38,TRF,IFR,BPT,005,4256,BPT,S34,D,3T,1,A,E,,t,EFD,POP,119,211,???,S,41,69.54,-2.42,?,,I,,17,0,11,,20:Practice approach departure counted.
+PL4,11/23/2022,15:14:53,GA,C182,APT,VFR,BPT,008,5350,,JFA,E,3T,0,G,,,t,,BPT,071,084,,S,41,64.53,-1.29,?,V,I,,13,0,11,,123:(Undefined)
+NASA904,11/23/2022,15:15:03,GA,T38,CST,IFR,BPT,005,4256,BPT,T12,A,3T,1,A,E,,t,EFD,POP,123,173,???,S,41,68.64,-1.99,?,,I,,17,0,11,,109:Coasted in airport capture area
+NASA904,11/23/2022,15:15:11,GA,T38,TRF,IFR,BPT,005,4256,BPT,T12,D,3T,1,A,E,,t,EFD,POP,122,215,???,S,41,69.74,-2.58,?,,I,,17,0,11,,20:Practice approach departure counted.
+AIRR2,11/23/2022,15:15:56,MI,B06,CST,VFR,BPT,004,0472,,,A,3T,0,E,,,t,,,164,044,???,S,41,69.18,-1.80,?,V,I,,17,0,11,,247:Count removed because aircraft never left closed pattern.
+N1003L,11/23/2022,15:20:35,GA,M20P,CST,IFR,BPT,001,4762,BPT,I12,A,3T,1,A,E,,t,HOU,HOU,120,084,???,S,41,68.74,-1.96,?,,I,,17,0,11,,109:Coasted in airport capture area
+N1003L,11/23/2022,15:21:43,GA,M20P,TRF,IFR,BPT,003,4762,BPT,I12,D,3T,1,A,E,,t,HOU,HOU,120,097,???,S,41,70.22,-2.83,?,,I,,17,0,11,,20:Practice approach departure counted.
+AIRR2,11/23/2022,15:25:03,MI,B06,TRF,VFR,BPT,003,0472,,,D,3T,0,E,,,t,,,108,051,???,S,41,69.75,-2.38,?,V,I,,17,0,11,,247:Count removed because aircraft never left closed pattern.
+AIRR2,11/23/2022,15:29:09,MI,B06,TRM,VFR,BPT,005,0472,,,A,3T,0,E,,,t,,,176,071,???,S,41,69.12,-1.80,?,V,I,,17,0,11,,247:Count removed because aircraft never left closed pattern.
+AIRR2,11/23/2022,15:30:00,MI,B06,TRF,VFR,BPT,002,0472,,,D,3T,0,E,,,t,,,082,049,???,S,41,69.79,-2.42,?,V,I,,17,0,11,,247:Count removed because aircraft never left closed pattern.
+AIRR2,11/23/2022,15:34:18,MI,B06,TRM,VFR,BPT,004,0472,,,A,3T,0,E,,,t,,,180,067,???,S,41,69.04,-1.83,?,V,I,,17,0,11,,247:Count removed because aircraft never left closed pattern.
+AIRR2,11/23/2022,15:35:59,MI,B06,TRF,VFR,BPT,002,0472,,,D,3T,0,E,,,t,,,038,061,???,S,41,69.82,-2.36,?,V,I,,17,0,11,,247:Count removed because aircraft never left closed pattern.
+AIRR2,11/23/2022,15:39:12,MI,B06,CST,VFR,BPT,005,0472,,,A,3T,0,E,,,t,,,130,052,???,S,41,69.44,-2.22,?,V,I,,17,0,11,,247:Count removed because aircraft never left closed pattern.
+AIRR2,11/23/2022,15:39:32,MI,B06,TRF,VFR,BPT,005,0472,,,D,3T,0,E,,,t,,,122,053,???,S,41,69.81,-2.50,?,V,I,,17,0,11,,247:Count removed because aircraft never left closed pattern.
+N499EM,11/23/2022,15:42:12,GA,C550,CST,VFR,BPT,002,5364,BPT,,A,3T,1,C,K,,t,,,118,122,???,S,41,68.75,-1.96,?,V,I,,17,0,11,,109:Coasted in airport capture area
+AIRR2,11/23/2022,15:44:25,MI,B06,CST,VFR,BPT,005,0472,,,A,3T,0,E,,,t,,,103,033,???,S,41,69.07,-2.11,?,V,I,,17,0,11,,247:Count removed because aircraft never left closed pattern.
+AIRR2,11/23/2022,15:45:09,MI,B06,TRF,VFR,BPT,004,0472,,,D,3T,0,E,,,t,,,064,056,???,S,41,69.83,-2.41,?,V,I,,17,0,11,,247:Count removed because aircraft never left closed pattern.
+AIRR2,11/23/2022,15:49:25,MI,B06,CST,VFR,BPT,005,0472,,,A,3T,0,E,,,t,,,123,047,???,S,41,69.00,-2.12,?,V,I,,17,0,11,,247:Count removed because aircraft never left closed pattern.
+AIRR2,11/23/2022,15:50:09,MI,B06,TRF,VFR,BPT,003,0472,,,D,3T,0,E,,,t,,,055,061,???,S,41,69.79,-2.44,?,V,I,,17,0,11,,247:Count removed because aircraft never left closed pattern.
+AIRR2,11/23/2022,15:53:23,MI,B06,CST,VFR,BPT,005,0472,,,A,3T,0,E,,,t,,,119,078,???,S,41,68.87,-2.03,?,V,I,,17,0,11,,247:Count removed because aircraft never left closed pattern.
+AIRR2,11/23/2022,15:54:10,MI,B06,TRF,VFR,BPT,004,0472,,,D,3T,0,E,,,t,,,070,055,???,S,41,69.76,-2.36,?,V,I,,17,0,11,,247:Count removed because aircraft never left closed pattern.
+AIRR2,11/23/2022,15:58:54,MI,B06,CST,VFR,BPT,005,0472,,,A,3T,0,E,,,t,,,216,064,???,S,41,69.52,-2.12,?,V,I,,17,0,11,,247:Count removed because aircraft never left closed pattern.
+PL7,11/23/2022,16:00:05,GA,C182,APT,VFR,BPT,006,5365,BPT,JFA,E,3T,0,G,O,,t,,BPT,085,115,,S,41,64.99,-4.94,?,V,I,,13,0,11,,204:Both TRACON and tower overflight count recorded.
+PL8PG,11/23/2022,16:02:08,GA,C182,APT,VFR,BPT,011,5336,BPT,JFA,E,3T,0,G,O,,t,,BPT,052,130,,S,41,65.79,-5.91,?,V,I,,13,0,11,,204:Both TRACON and tower overflight count recorded.
+AIRR2,11/23/2022,16:06:46,MI,B06,TRF,VFR,BPT,003,0472,,,D,3T,0,E,,,t,,,009,054,???,S,41,69.96,-1.98,?,V,I,,17,0,11,,247:Count removed because aircraft never left closed pattern.
+AIRR2,11/23/2022,16:10:46,MI,B06,TRM,VFR,BPT,003,0472,,,A,3T,0,E,,,t,,,158,049,???,S,41,68.83,-1.98,?,V,I,,17,0,11,,247:Count removed because aircraft never left closed pattern.
+AIRR2,11/23/2022,16:11:33,MI,B06,TRF,VFR,BPT,006,0472,,,D,3T,0,E,,,t,,,121,063,???,S,41,69.83,-2.63,?,V,I,,17,0,11,,247:Count removed because aircraft never left closed pattern.
+PL18,11/23/2022,16:12:42,GA,C182,APT,VFR,BPT,007,0441,BPT,JFA,E,3T,0,G,,,t,,BPT,239,122,,S,41,69.22,2.47,?,V,I,,13,0,11,,205:No TRACON overflight because departure was counted.
+AIRR2,11/23/2022,16:15:41,MI,B06,TRM,VFR,BPT,003,0472,,,A,3T,0,E,,,t,,,220,065,???,S,41,69.00,-1.89,?,V,I,,17,0,11,,247:Count removed because aircraft never left closed pattern.
+AIRR2,11/23/2022,16:16:22,MI,B06,TRF,VFR,BPT,006,0472,,,D,3T,0,E,,,t,,,124,060,???,S,41,69.88,-2.66,?,V,I,,17,0,11,,247:Count removed because aircraft never left closed pattern.
+PL7,11/23/2022,16:17:21,GA,C182,APT,VFR,BPT,007,5365,BPT,JFA,E,3T,0,G,O,,t,,BPT,241,136,,S,41,69.25,2.48,?,V,I,,13,0,11,,204:Both TRACON and tower overflight count recorded.
+AIRR2,11/23/2022,16:20:11,MI,B06,TRM,VFR,BPT,005,0472,,,A,3T,0,E,,,t,,,245,072,???,S,41,69.23,-1.75,?,V,I,,17,0,11,,247:Count removed because aircraft never left closed pattern.
+N499EM,11/23/2022,16:36:30,GA,C550,TRF,IFR,BPT,004,4527,,ROM,D,1B,1,A,E,,t,BPT,RAF,122,169,???,S,41,69.99,-2.70,?,,I,,17,0,11,,90:Initial departure count.
+N8CC,11/23/2022,17:05:00,GA,C210,TRF,VFR,BPT,003,5330,SBI,,D,3T,1,C,K,,t,,,122,098,???,S,41,70.10,-2.77,?,V,I,,17,0,11,,90:Initial departure count.
+N779G,11/23/2022,17:59:14,GA,P28A,CST,VFR,BPT,003,4755,BPT,,A,3T,1,C,K,,t,PE2,BPT,120,075,???,S,41,68.74,-1.98,?,V,I,,17,0,11,,109:Coasted in airport capture area
+N779G,11/23/2022,18:08:23,GA,P28A,TRF,VFR,BPT,006,5351,EFD,,D,1B,1,C,K,,t,,,127,071,???,S,41,69.99,-2.77,?,V,I,,17,0,11,,90:Initial departure count.
+N834UW,11/23/2022,18:33:31,GA,EC35,APT,VFR,BPT,025,4774,LCH,,E,1B,0,G,O,,t,BPT,BPT,075,106,,,41,64.69,-4.22,?,V,I,,13,0,11,,204:Both TRACON and tower overflight count recorded.
+N759G,11/23/2022,18:40:40,GA,C25A,TRF,IFR,BPT,005,4502,,,D,1B,1,A,E,,t,BPT,CFO,123,159,???,S,41,70.06,-2.77,?,,I,,17,0,11,,90:Initial departure count.
+PL00A,11/23/2022,19:11:08,GA,C182,APT,VFR,BPT,006,5342,BPT,,E,3T,0,G,O,,t,,BPT,078,107,,S,41,64.97,-4.87,?,V,I,,13,0,11,,204:Both TRACON and tower overflight count recorded.
+PL00A,11/23/2022,19:30:52,GA,C182,APT,VFR,BPT,005,5342,BPT,,E,3T,0,G,O,,t,,BPT,240,126,,S,41,69.26,2.44,?,V,I,,13,0,11,,204:Both TRACON and tower overflight count recorded.
+LXJ355,11/23/2022,19:36:12,AT,E55P,CST,IFR,BPT,002,4743,BPT,W12,A,3T,1,A,E,,t,IAH,BPT,120,115,???,,41,68.77,-1.98,?,,H,,17,0,11,,109:Coasted in airport capture area
+N882AC,11/23/2022,19:39:13,GA,E35L,CST,IFR,BPT,002,5237,BPT,W12,A,3T,1,A,E,,t,HOU,BPT,120,140,???,,41,68.68,-1.94,?,,G,,17,0,11,,109:Coasted in airport capture area
+N8CC,11/23/2022,19:49:21,GA,C210,CST,VFR,BPT,003,7442,BPT,I12,A,3T,1,C,K,,t,PE2,BPT,120,096,???,S,41,68.72,-1.96,?,V,I,,17,0,11,,109:Coasted in airport capture area
+LN521MT,11/23/2022,20:05:19,AT,HELO,APT,VFR,BPT,001,5373,,,A,3T,0,G,,,t,,H01,078,009,,,41,71.14,-3.27,^,V,,,17,0,11,,109:Coasted in airport capture area
+LXJ355,11/23/2022,20:08:10,AT,E55P,TRF,IFR,BPT,007,2577,,ROM,D,1J,1,A,E,,t,BPT,RAF,122,139,???,,41,69.93,-2.68,?,,H,,17,0,11,,90:Initial departure count.
+SKW4935,11/23/2022,20:09:17,AC,CRJ7,CST,IFR,BPT,002,2762,BPT,,A,3T,1,A,E,,t,PE2,BPT,120,131,???,L,41,68.73,-1.94,?,,G,,17,0,11,,109:Coasted in airport capture area
+N5384K,11/23/2022,20:25:20,GA,C172,CST,VFR,BPT,001,5365,BPT,,A,3T,1,C,K,,t,,,120,070,???,S,41,68.80,-2.00,?,V,I,,17,0,11,,109:Coasted in airport capture area
+N5384K,11/23/2022,20:26:27,GA,C172,TRF,VFR,BPT,003,5365,BPT,,D,3T,0,E,,,t,,,123,082,???,S,41,70.04,-2.76,?,V,I,,17,0,11,,247:Count removed because aircraft never left closed pattern.
+N160SM,11/23/2022,20:27:48,GA,B350,CST,IFR,BPT,002,5214,BPT,W12,A,3T,1,A,E,,t,IAH,BPT,120,128,???,S,41,68.72,-1.95,?,,H,,17,0,11,,109:Coasted in airport capture area
+N5384K,11/23/2022,20:29:53,GA,C172,CST,VFR,BPT,002,5365,BPT,,A,3T,0,E,,,t,,,125,067,???,S,41,68.78,-2.00,?,V,I,,17,0,11,,247:Count removed because aircraft never left closed pattern.
+N5384K,11/23/2022,20:31:02,GA,C172,TRF,VFR,BPT,004,5365,BPT,,D,3T,1,C,K,,t,,,134,083,???,S,41,70.06,-2.82,?,V,I,,17,0,11,,20:Practice approach departure counted.
+LN512MT,11/23/2022,20:33:47,GA,HELO,TRF,VFR,BPT,001,0451,,,D,3T,1,C,K,,t,,,096,095,???,,41,71.15,-3.27,?,V,,,17,0,11,N512MT,90:Initial departure count.
+N15894,11/23/2022,20:41:47,GA,P28A,TRF,VFR,BPT,005,2462,HSD,,D,1J,1,C,K,,t,BPT,PN2,123,082,???,S,41,70.16,-2.82,?,V,I,,17,0,11,N19854,90:Initial departure count.
+N546B,11/23/2022,21:10:57,GA,P28A,TRF,VFR,BPT,006,0445,GLS,,D,1J,1,C,K,,t,,,131,068,???,S,41,69.98,-2.77,?,V,I,,17,0,11,,90:Initial departure count.
+N602WT,11/23/2022,21:30:11,GA,RV10,TRF,VFR,BPT,005,0440,S,,D,1J,1,C,K,,t,,,122,101,???,,41,70.10,-2.78,?,V,I,,17,0,11,,90:Initial departure count.
+SKW4935,11/23/2022,21:32:07,AC,CRJ7,TRF,IFR,BPT,005,7227,,ROM,D,1J,1,A,E,,t,BPT,RAF,121,149,???,L,41,70.19,-2.80,?,,G,,17,0,11,,90:Initial departure count.
+N8204J,11/23/2022,21:37:07,GA,P28A,TRF,VFR,BPT,005,4603,OCH,,D,1J,1,C,K,,t,BPT,PN2,126,069,???,S,41,70.04,-2.80,?,V,I,,17,0,11,,90:Initial departure count.
+FFL815,11/23/2022,22:04:31,AT,FA50,TRF,VFR,BPT,004,5367,IAH,,D,1J,1,C,K,,t,,,123,140,???,S,41,70.05,-2.75,?,V,H,,17,0,11,,90:Initial departure count.
+N602WT,11/23/2022,22:13:08,GA,RV10,CST,VFR,BPT,002,0440,BPT,WX,A,3T,1,C,K,,t,,,121,087,???,,41,68.78,-2.00,?,V,I,,17,0,11,,109:Coasted in airport capture area
+N759G,11/23/2022,22:20:16,GA,C25A,CST,IFR,BPT,002,4542,BPT,I12,A,3T,1,A,E,,t,IAH,BPT,120,108,???,S,41,68.79,-1.99,?,,I,,17,0,11,,109:Coasted in airport capture area
+N7232W,11/23/2022,22:26:30,GA,P28A,CST,VFR,BPT,002,5355,BPT,CXO,A,3T,1,C,K,,t,,,120,077,???,S,41,68.72,-1.96,?,V,I,,17,0,11,,109:Coasted in airport capture area
+N7232W,11/23/2022,22:27:40,GA,P28A,TRF,VFR,BPT,005,5355,BPT,CXO,D,3T,1,C,K,,t,,,120,069,???,S,41,70.01,-2.69,?,V,I,,17,0,11,,20:Practice approach departure counted.
+N4326C,11/23/2022,22:31:55,GA,C340,APT,VFR,BPT,014,0445,BPT,I12,E,3T,0,G,,,t,,BPT,120,095,,S,41,65.15,0.12,?,V,I,,13,0,11,,205:No TRACON overflight because departure was counted.
+N566RV,11/23/2022,22:46:36,GA,RV6,TRF,VFR,BPT,007,5356,S,,D,3T,0,E,,,t,,,168,080,???,,41,69.37,-2.72,?,V,I,,17,0,11,,247:Count removed because aircraft never left closed pattern.
+N566RV,11/23/2022,22:50:04,GA,RV6,CST,VFR,BPT,004,5356,S,,A,3T,0,E,,,t,,,115,154,???,,41,68.63,-1.89,?,V,I,,17,0,11,,247:Count removed because aircraft never left closed pattern.
+N566RV,11/23/2022,22:50:23,GA,RV6,TRF,VFR,BPT,008,5356,S,,D,3T,1,C,K,,t,,,126,114,???,,41,69.83,-2.65,?,V,I,,17,0,11,,20:Practice approach departure counted.
+N546B,11/23/2022,23:04:13,GA,P28A,CST,VFR,BPT,003,4536,BPT,,A,3T,1,C,K,,t,PE2,PE2,136,068,???,S,41,68.77,-1.98,?,V,I,,17,0,11,,109:Coasted in airport capture area
+N566RV,11/23/2022,23:11:48,GA,,CST,VFR,BPT,003,5353,,,A,3T,1,C,K,,t,,,161,080,???,,41,69.16,-1.73,?,V,,,17,0,11,,109:Coasted in airport capture area
+N566RV,11/23/2022,23:22:49,GA,RV6,TRF,VFR,BPT,008,5326,SWP,,D,3T,1,C,K,,t,,,176,073,???,,41,69.33,-2.70,?,V,I,,17,0,11,,90:Initial departure count.
+N566RV,11/23/2022,23:41:25,GA,,CST,VFR,BPT,003,5336,,,A,3T,1,C,K,,t,,,112,061,???,,41,68.75,-1.96,?,V,,,17,0,11,,109:Coasted in airport capture area
+N8204J,11/23/2022,23:45:27,GA,P28A,CST,VFR,BPT,001,4603,BPT,WX,A,3T,1,C,K,,t,PN2,BPT,121,056,???,S,41,68.78,-1.99,?,V,I,,17,0,11,,109:Coasted in airport capture area
+FFL815,11/24/2022,00:11:06,AT,FA50,CST,VFR,BPT,002,4552,BPT,,A,3T,1,C,K,,t,IAH,PE3,120,112,???,S,41,68.74,-1.97,?,V,H,,17,0,11,,109:Coasted in airport capture area
+FFL815,11/24/2022,00:24:59,AT,FA50,TRF,VFR,BPT,006,4537,CWF,,D,1D,1,C,K,,t,BPT,PE3,120,148,???,S,41,70.23,-2.83,?,V,H,,17,0,11,,90:Initial departure count.
+SKW4998,11/24/2022,05:29:25,AC,CRJ7,CST,IFR,BPT,002,2301,BPT,VA,A,1L,1,A,E,,t,PE2,BPT,120,113,???,L,41,68.76,-1.98,?,,G,,17,0,11,,109:Coasted in airport capture area
+SKW4998,11/24/2022,05:30:15,AC,CRJ7,TRF,IFR,BPT,002,2301,BPT,VA,D,1L,1,E,,,t,PE2,BPT,120,123,???,L,41,70.73,-3.10,?,,G,,17,0,11,,20:Practice approach departure counted.
