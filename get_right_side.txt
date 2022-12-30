@@ -1,0 +1,164 @@
+Sub Get_Right_Side()
+Dim f, sFile0, LeftSide, sInputFile, sAWBname, Side, sWS_name As String
+Dim lLastRow As Long
+Dim iLastRow As Long, LastRow As Long
+Dim rNum, sNum, flag, xSide As Integer
+Dim sht As Worksheet
+
+sAWBname = ActiveWorkbook.Name              ' WorkBook Name
+ChDir ThisWorkbook.path                     ' WorkBook Directory
+rNum = 1                                    ' Start with number 1 check for existing Recount# Sheets
+srecount = "Recount#" & rNum                ' Set sRecount Initialy to Recount#1
+  For Each sht In ThisWorkbook.Worksheets
+  ssName = sht.Name                         ' Load sheet name convenience watch sheets load and allow the Instr below to be shorter
+    If Left(sht.Name, InStr(ssName, "#")) = "Recount#" Then           ' Found Recount# Sheet
+      sNum = Right(sht.Name, (Len(sht.Name) - InStr(sht.Name, "#")))  ' Strip off the Number
+      If rNum < sNum Then                   ' Is the sNum Sheet number larger than the rNum tracking number
+         rNum = sNum                        ' Change rNum to the largest sheet and keep cheching
+         srecount = "Recount#" & rNum + 1   ' In case this is the one load sRecount with the rNum largest sheet number plus one
+      End If
+    End If
+  Next sht                                  ' after all sheets checked sRecount is largest sheet number if there was none it is Recount#1
+
+rNum = 0
+sNum = 0
+Side = "GO"                                 ' Find Right Side can Automated Count or an existing Receount Sheet Number
+  Do While Side = "GO"
+    LeftSide = "" & Application.InputBox("SELECT LeftSide Data for " & srecount & Chr(13) & Chr(10) & Chr(13) & Chr(10) _
+              & "Load LeftSide with Automated Count" & Chr(13) & Chr(10) _
+              & "Select OK or Keyboard ENTER" & Chr(13) & Chr(10) & Chr(13) & Chr(10) _
+              & "          or" & Chr(13) & Chr(10) & Chr(13) & Chr(10) _
+              & "Load LeftSide with a Recount RightSide" & Chr(13) & Chr(10) _
+              & "Enter Number of the Recount Sheet then Select OK" & Chr(13) & Chr(10) & Chr(13) & Chr(10) _
+              & "          or" & Chr(13) & Chr(10) & Chr(13) & Chr(10) _
+              & "Select Cancel" & Chr(13) & Chr(10) & Chr(13) & Chr(10) _
+              & "", "CountOps  The Traffic Count Program", "Automated Count")
+                  
+    If LeftSide = "False" Then Exit Sub           ' Cancel Button retuns a FALSE
+    If (LeftSide = "Automated Count") Then        ' Check if selected Automed Count
+      Exit Do                                     ' STOP Automated Count selected no more checking needed
+    Else
+      If IsNumeric(LeftSide) Then                 ' Did Not select Automated Count check was a number entered
+        rNum = CInt(LeftSide)                     ' Convert entered Text Number to Integer need a number to compare
+        For Each sht In ThisWorkbook.Worksheets
+        ssName = sht.Name
+          If Left(sht.Name, InStr(ssName, "#")) = "Recount#" Then             ' Check Recount Sheets
+            sNum = Right(sht.Name, (Len(sht.Name) - InStr(sht.Name, "#")))    ' Strip the Sheet Number
+            sNum = CInt(sNum)                                                 ' Convert Text Sheet Number to Integer
+            If rNum = sNum Then                 ' MATCH
+                LeftSide = "Recount#" & sNum    ' Load LeftSide as Recount#  plus the sheet number
+                Exit Do                         ' STOP Entered Number matches a Recount Sheet
+            End If
+          End If
+        Next sht
+        Side = "GO"     ' GO to try again   Entered a Number but no matching Recount sheet
+      End If
+    Side = "GO"         ' Go to try again   Did not enter Automated Count or a Number
+    End If
+  Loop
+
+Application.ScreenUpdating = False
+Sheets("Automated Count").Copy After:=Sheets("Automated Count")           ' Copy Automated Count Sheet to new Sheet
+sWS_name = ActiveSheet.Name                                               ' New Sheet named Automated Count(2)
+Sheets(sWS_name).Name = srecount                                          ' Change name to new Recount#
+Sheets(srecount).Move After:=Sheets("Automated Count")                    ' Move Sheet Tab new Recount after Automated Count
+
+Sheets(srecount).Columns("aA:aZ").EntireColumn.Hidden = False             ' Left and right side display same columns
+Sheets(srecount).Columns("aR:aR").EntireColumn.Hidden = True
+Sheets(srecount).Columns("aT:aT").EntireColumn.Hidden = True
+Sheets(srecount).Columns("aX:aY").EntireColumn.Hidden = True
+
+LastRow = Sheets("Automated Count").Range("C1048576").End(xlUp).Row       ' Automated Count is starting point find last row
+iLastRow = Sheets(LeftSide).Range("AC1048576").End(xlUp).Row              ' Left may be Automated or a Recount Right Side
+  If LastRow < iLastRow Then LastRow = iLastRow                           ' Assure Last Row is longest last row
+
+  If LeftSide <> "Automated Count" Then                                   ' If Automated Count left side already loaded with sheet copy
+    Sheets(srecount).Range("B15:Z" & LastRow).Interior.Pattern = xlNone   ' Remove copied not wanted Automated Count highlights cells
+    Sheets(srecount).Range("B15:Z" & LastRow).ClearComments               ' Remove copied not wanted Automated Count Comments
+    Sheets(srecount).Range("A15:Z" & LastRow).Value = Sheets(LeftSide).Range("Aa15:aZ" & LastRow).Value
+    Sheets(LeftSide).Range("aB15:aS" & LastRow).Copy
+    Sheets(srecount).Range("B15:S" & LastRow).PasteSpecial Paste:=xlPasteComments
+  End If
+    
+Sheets(srecount).Range("A3").Select
+Sheets("RightSide History").Visible = True              ' Prep RightSide History Sheet
+Sheets("RightSide History").Activate
+Sheets("RightSide History").Rows("1:1048576").Delete    ' Clean Up RightSide History Sheet
+Sheets("RightSide History").Range("A1").Select          ' Go to A1 ready to load csv file
+    
+sInputFile = Application.GetOpenFilename("CountOps 'CSV History' Files (*.csv) , *.csv", Title:="Looking for a 'XXX Recount History xxx' file")
+    If sInputFile = "False" Then
+      Application.DisplayAlerts = False
+      Sheets(srecount).Delete
+      Sheets("RightSide History").Visible = False
+      Sheets("Instructions").Select
+      Exit Sub                                          ' Cancel Button retuns a FALSE
+    End If
+Workbooks.Open Filename:=sInputFile                     ' Load csv file that will be Right Side data
+sFile0 = GetFileName(sInputFile)
+                                                        ' Find Header Row
+Cells.Find(What:="Callsign", After:=ActiveCell, LookIn:=xlFormulas, LookAt:=xlPart, SearchOrder:=xlByColumns, _
+    SearchDirection:=xlNext, MatchCase:=False, SearchFormat:=False).Cells.Range(Selection, ActiveCell.SpecialCells(xlLastCell)).Copy
+
+Windows(sAWBname).ActiveSheet.Paste         ' Paste csv file to working folder RightSide History
+Application.DisplayAlerts = False           ' Don't stop with alert  Do you want to save the csv file
+Workbooks(sFile0).Close saveChanges:=False  ' Close the csv file
+Application.DisplayAlerts = True
+   
+Application.Run "P_Populate_Right.Populate_Right"             ' Private SUB in another module
+Sheets(srecount).Range("aC:aC,aR:aR,aT:AT,aX:aY").EntireColumn.Hidden = True
+Sheets(srecount).Range("AA1:AZ1").Copy
+Sheets(srecount).Range("AA15:AZ" & LastRow).PasteSpecial Paste:=xlPasteFormats
+        
+Sheets(srecount).Select
+Sheets(srecount).Range("bb2").Value = "Left"
+Sheets(srecount).Range("bc2").Value = "Right"
+Sheets(srecount).Range("BA3").Value = "ACID"
+Sheets(srecount).Range("BA4").Value = "Cat"
+Sheets(srecount).Range("BA6").Value = "Beacon"
+        
+Sheets(srecount).Range("bb3").Formula = "=sumproduct(N(len(b15:b1048576)>=1))"
+Sheets(srecount).Range("bb4").Formula = "=sumproduct(N(len(e15:e1048576)=2))"
+Sheets(srecount).Range("bb6").Formula = "=sumproduct(N(len(q15:q1048576)=4))"
+Sheets(srecount).Range("bc3").Formula = "=sumproduct(N(len(ab15:ab1048576)>=1))"
+Sheets(srecount).Range("bc4").Formula = "=sumproduct(N(len(ae15:ae1048576)=2))"
+Sheets(srecount).Range("bc6").Formula = "=sumproduct(N(len(aq15:aq1048576)=4))"
+          
+Sheets(srecount).Range("d3").Formula = "=" & "CountA(B15:B1048575)"
+Sheets(srecount).Range("ad3").Formula = "=" & "CountA(aB15:aB1048575)"
+Sheets(srecount).Range("A1").Value = "E"
+Sheets(srecount).Range("aA1").Value = "E"
+Sheets(srecount).Range("B3").Value = LeftSide
+Sheets(srecount).Range("aB3").Value = srecount
+
+LastRow = Sheets(srecount).Range("C1048576").End(xlUp).Row ' Automated Count is starting point find last row
+Sheets(srecount).Range("A1:Z1").Copy                              ' Left Side Copy Conditional Formating stored in hidden Row 1
+Sheets(srecount).Range("A15:Z" & LastRow).PasteSpecial Paste:=xlPasteFormats
+
+LastRow = Sheets(srecount).Range("aC1048576").End(xlUp).Row ' Automated Count is starting point find last row
+Sheets(srecount).Range("aA1:aZ1").Copy                            ' Right Side Copy Conditional Formating stored in hidden Row 1
+Sheets(srecount).Range("aA15:aZ" & LastRow).PasteSpecial Paste:=xlPasteFormats
+
+Sheets(srecount).Rows("15:15").Select
+ActiveWindow.FreezePanes = True
+
+Sheets(srecount).Range("Z:Z").ColumnWidth = 2
+Sheets(srecount).Range("aZ:aZ").ColumnWidth = 2
+Sheets(srecount).Range("W:W,Z:Z").WrapText = False
+Sheets(srecount).Range("W:W,Z:Z").ShrinkToFit = True
+
+Columns("Q:Q").NumberFormat = "0000"
+Columns("aQ:aQ").NumberFormat = "0000"
+ActiveWindow.Zoom = 81
+
+Sheets("RightSide History").Visible = False
+Sheets("Compliance Results").Unprotect
+Sheets("Compliance Results").Range("B17").Value = srecount
+Sheets("Compliance Results").Protect
+Sheets(srecount).Select
+
+Application.Run "b_Compare_Day.Convert_Time"
+Sheets(srecount).Range("A3").Select
+Application.ScreenUpdating = True
+Application.Run "P_ToolBars.z_Control_T__Display_AddIn"      ' Private SUB in another module
+End Sub
